@@ -3,9 +3,20 @@ let testName :string = 'kim';
 let testObject :{name?: string, name2: number} = {name2: 123}; // ? -> 옵션
 let testUnion :string | number = 123; // union
 
-// 타입 지정
+// 타입 지정 (변수에 담아 쓰기)
 type isUnion = string | number;
 let testName2 :isUnion = 'kwon';
+
+type animal = {name: string, age: number};
+let animalInfo :animal = {name: '강아지', age: 2};
+
+type girlfriend = {
+    readonly name : string
+};
+const newfriend :girlfriend = {
+    name : '유라'
+}
+// newfriend.name = '수지'; -> readonly 지정을 해놨기 때문에 수정은 불가함
 
 // 타입을 미리 지정하기 애매할 때 any, unknown
 /* any : 타입실드 해제문법 (일반 JS 변수로 만듦) */

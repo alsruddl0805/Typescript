@@ -3,6 +3,10 @@ var testName = 'kim';
 var testObject = { name2: 123 };
 var testUnion = 123;
 var testName2 = 'kwon';
+var animalInfo = { name: '강아지', age: 2 };
+var newfriend = {
+    name: '유라'
+};
 var anyName;
 anyName = 123;
 anyName = 'test';

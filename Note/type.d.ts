@@ -6,6 +6,15 @@ declare let testObject: {
 declare let testUnion: string | number;
 declare type isUnion = string | number;
 declare let testName2: isUnion;
+declare type animal = {
+    name: string;
+    age: number;
+};
+declare let animalInfo: animal;
+declare type girlfriend = {
+    readonly name: string;
+};
+declare const newfriend: girlfriend;
 declare let anyName: any;
 declare type Member = [number, boolean];
 declare let john: Member;

@@ -18,6 +18,9 @@ const newfriend :girlfriend = {
 }
 // newfriend.name = '수지'; -> readonly 지정을 해놨기 때문에 수정은 불가함
 
+// 특정 타입만 지정 : 특정 글자나 숫자만 가질 수 있게 제한을 둠
+let tom :'솔로'; // tom에는 '솔로'만 들어올 수 있음
+
 // 타입을 미리 지정하기 애매할 때 any, unknown
 /* any : 타입실드 해제문법 (일반 JS 변수로 만듦) */
 let anyName :any;

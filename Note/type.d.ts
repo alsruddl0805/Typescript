@@ -15,6 +15,8 @@ declare type girlfriend = {
     readonly name: string;
 };
 declare const newfriend: girlfriend;
+declare type functionType = (a: string) => number;
+declare let testFunction: functionType;
 declare let tom: '솔로';
 declare let anyName: any;
 declare type Member = [number, boolean];

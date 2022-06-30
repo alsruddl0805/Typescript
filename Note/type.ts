@@ -18,6 +18,19 @@ const newfriend :girlfriend = {
 }
 // newfriend.name = '수지'; -> readonly 지정을 해놨기 때문에 수정은 불가함
 
+// 타입 지정 (함수 저장해서 쓰기)
+/*
+1. 함수 타입은 () => {} 모양으로
+2. 함수 표현식에만 type alias 사용 가능
+
+function 키워드에는 () 이거 내부랑 오른쪽에만 타입지정이 가능하기 때문에 let 함수이름 :함수타입 = function(){} 형태로 사용
+*/
+type functionType = (a: string) => number;
+let testFunction :functionType = function () {
+    return 10;
+}
+
+
 // 특정 타입만 지정 : 특정 글자나 숫자만 가질 수 있게 제한을 둠
 let tom :'솔로'; // tom에는 '솔로'만 들어올 수 있음
 

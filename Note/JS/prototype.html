@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 부모
+        function machine(q, w) {
+            this.q = q;
+            this.w = w;
+        }
+
+        // 자식
+        let nunu = new machine('consume', 'snowball');
+
+        // machine.prototype -> .prototype : 자동으로 생기는 공간 (like 유전자 ?)
+        machine.prototype.name = 'kim';
+
+        /*
+        이렇게 새로운 속성을 부여해놓으면, let nunu object에는 없지만, nunu.name 에는 존재한다. (부모에게서 물려받음)
+
+        사용 가능한 이유
+        ex ) nunu.name -> nunu에는 name이 없지만, 컴퓨터는 부모까지 올라가서 데이터를 찾음 (부모에게도 없으면 부모의 부모에게도)
+        => prototype chain ?
+        */
+
+        // 모든 array 자료에서 쓸 수 있는 함수 추가
+        Array.prototype.myFunction = function () {
+            // 내가 작성한 로직을 모든 Array에서 공통으로 갖다쓸 수 있게 됨
+        }
+    </script>
+</body>
+</html>

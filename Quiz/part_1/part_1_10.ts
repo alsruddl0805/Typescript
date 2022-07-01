@@ -1,3 +1,5 @@
+// Part 1 _ 10 : 타입스크립트로 HTML 변경과 조작할 때 주의점
+
 let title = document.querySelector("#title");
 
 // narrowing 5가지

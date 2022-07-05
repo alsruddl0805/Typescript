@@ -51,3 +51,16 @@ function setNarrrow(x : number | string) {
 function setAssert(x : number | string) {
     return (x as number) + 1;
 }
+
+// export / import 변수/함수 테스트
+export type Car2 = {
+    wheel : number,
+    model : string
+  }
+
+export interface Bike {
+    wheel : 2,
+    model : string
+}
+
+export type ObjFunction = (obj :{name :string}) => void;

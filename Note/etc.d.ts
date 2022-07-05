@@ -1,4 +1,11 @@
-declare let age: string | number;
-declare let age2: unknown;
-declare function setNarrrow(x: number | string): string | number;
-declare function setAssert(x: number | string): number;
+export declare type Car2 = {
+    wheel: number;
+    model: string;
+};
+export interface Bike {
+    wheel: 2;
+    model: string;
+}
+export declare type ObjFunction = (obj: {
+    name: string;
+}) => void;

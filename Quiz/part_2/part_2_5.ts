@@ -48,17 +48,21 @@ User.printX()  //이렇게 하면 콘솔창에 x값이 출력되어야함
 (조건) private static x = 10; 이 코드 수정금지 
 */
 
-// class addNum {
-//     private static x = 10;
-//     public static y = 20;
+class addNum {
+    private static x = 10;
+    public static y = 20;
 
-//     addOne(num :number) :number {
-//         this.x += num;
-//     }
-//     printX() {
-//         console.log(this.x);
-//     }
-//   }
+    static addOne(num :number) {
+        addNum.x += num;
+    }
+    static printX() {
+        console.log(addNum.x);
+    }
+  }
+
+  addNum.addOne(3)
+  addNum.addOne(10)
+  addNum.printX();
 
 /*
 Q3. 
@@ -85,15 +89,26 @@ class Square{
     }
 
     draw() {
-        let box = document.querySelector('.wrap');
-        if (box instanceof Element) {
-            let redBox = document.createElement('div');
-            redBox.style.width = this.width + 'px';
-            redBox.style.height = this.height + 'px';
-            redBox.style.backgroundColor = this.color;
+        // 내 답변 : 무작위 생성이 되지 않았음.
+        // let box = document.querySelector('.wrap');
+        // if (box instanceof Element) {
+        //     let redBox = document.createElement('div');
+        //     redBox.style.width = this.width + 'px';
+        //     redBox.style.height = this.height + 'px';
+        //     redBox.style.backgroundColor = this.color;
 
-            box.append(redBox);
-        }        
+        //     box.append(redBox);
+        // }        
+
+        // 답
+        let a = Math.random();
+        let square = `<div style="position:relative; 
+          top:${a * 400}px; 
+          left:${a * 400}px; 
+          width:${this.width}px; 
+          height : ${this.height}px; 
+          background:${this.color}"></div>`;
+        document.body.insertAdjacentHTML( 'beforeend', square );
     }
 }
 

@@ -47,6 +47,22 @@ var User5 = (function () {
     User5.y = 20;
     return User5;
 }());
+var addNum = (function () {
+    function addNum() {
+    }
+    addNum.addOne = function (num) {
+        addNum.x += num;
+    };
+    addNum.printX = function () {
+        console.log(addNum.x);
+    };
+    addNum.x = 10;
+    addNum.y = 20;
+    return addNum;
+}());
+addNum.addOne(3);
+addNum.addOne(10);
+addNum.printX();
 var Square = (function () {
     function Square(w, h, c) {
         this.width = w;
@@ -54,14 +70,9 @@ var Square = (function () {
         this.color = c;
     }
     Square.prototype.draw = function () {
-        var box = document.querySelector('.wrap');
-        if (box instanceof Element) {
-            var redBox = document.createElement('div');
-            redBox.style.width = this.width + 'px';
-            redBox.style.height = this.height + 'px';
-            redBox.style.backgroundColor = this.color;
-            box.append(redBox);
-        }
+        var a = Math.random();
+        var square = "<div style=\"position:relative; \n          top:".concat(a * 400, "px; \n          left:").concat(a * 400, "px; \n          width:").concat(this.width, "px; \n          height : ").concat(this.height, "px; \n          background:").concat(this.color, "\"></div>");
+        document.body.insertAdjacentHTML('beforeend', square);
     };
     return Square;
 }());

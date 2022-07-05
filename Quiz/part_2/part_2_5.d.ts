@@ -14,6 +14,12 @@ declare class User5 {
     static y: number;
     protected z: number;
 }
+declare class addNum {
+    private static x;
+    static y: number;
+    static addOne(num: number): void;
+    static printX(): void;
+}
 declare class Square {
     width: number;
     height: number;

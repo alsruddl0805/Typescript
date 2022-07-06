@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var age;
+var age = 3;
 var age2 = 1;
+console.log(age, age2);
 function setNarrrow(x) {
     if (typeof x === 'number') {
         return x + 1;
@@ -13,6 +14,8 @@ function setNarrrow(x) {
         return 0;
     }
 }
+setNarrrow(3);
 function setAssert(x) {
     return x + 1;
 }
+setAssert('3');

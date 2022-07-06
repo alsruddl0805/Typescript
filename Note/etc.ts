@@ -1,7 +1,9 @@
 // Part 1 _ 4 : Typescript의 엄격함에 대하여
 
-let age :string|number;
+let age :string|number = 3;
 let age2 :unknown = 1;
+console.log(age, age2);
+
 
 /* 
 age + 1; -> 에러가 나는 이유
@@ -37,6 +39,7 @@ function setNarrrow(x : number | string) {
         return 0;
     }
 }
+setNarrrow(3);
 
 /* 
 2 ) Type Assertion : 변수명 as type
@@ -51,6 +54,7 @@ function setNarrrow(x : number | string) {
 function setAssert(x : number | string) {
     return (x as number) + 1;
 }
+setAssert('3');
 
 // export / import 변수/함수 테스트
 export type Car2 = {

@@ -68,3 +68,15 @@ export interface Bike {
 }
 
 export type ObjFunction = (obj :{name :string}) => void;
+
+
+// js 파일과 다르게, ts 파일은 자동으로 전역변수로 다른 파일끼리 사용이 가능하다.
+// 1. js -> ts 변수 갖다 쓸 때 재 정의 하는 법 (declare)
+declare let myName :string;
+
+// 2. 파일 자체를 로컬로 만드는 법 (파일 어디에든 export{})
+
+// 3. 로컬로 만든 파일에서 전역변수 만드는 법 (declare) / 로컬 파일 내부에서도 전역변수 생성할 수 있음
+declare global {
+    type Dog = string;
+}
